@@ -1,0 +1,840 @@
+#walk-preview {
+  height: 600px;
+  width: 70%;
+}
+#walk-map {
+  height: 600px;
+}
+#markersMapWindow {
+  height: 495px;
+  width: 800px;
+  visibility: hidden;
+}
+#markersWrapper #markerInfo {
+  width: 280px;
+  height: 465px;
+  float: left;
+  padding-left: 20px;
+}
+h3.hndle {
+  margin-bottom: 0px;
+}
+textarea {
+  width: 100%;
+}
+.panel-left {
+  float: left;
+  width: 60%;
+}
+.panel-right {
+  float: left;
+  width: 40%;
+}
+.panel-right .panel-wrap {
+  padding: 0 0 0 10px;
+}
+#markersMap {
+  height: 495px;
+  width: 500px;
+  float: left;
+}
+#editor-toolbar ul {
+  list-style: none;
+}
+#editor-toolbar ul li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+#editor-toolbar ul a {
+  display: block;
+  background-color: #f27935;
+  line-height: 20px;
+  text-align: center;
+  padding: 10px 15px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.1);
+  -moz-border-radius-: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+#editor-toolbar ul a:hover {
+  background-color: #9ea7b3;
+}
+#editor-toolbar ul .selected a {
+  background-color: #9ea7b3;
+}
+.ui-tabs-nav li {
+  display: inline-block;
+  background-color: #dfdfdf;
+  border: 1px solid #dedede;
+  padding: 12px;
+  border-bottom: 0;
+  margin-bottom: -1px;
+  margin-right: 10px;
+}
+.ui-tabs-nav li.ui-tabs-active {
+  background-color: white;
+}
+.ui-tabs-nav li a {
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+#marker-add-button {
+  padding-left: 20px;
+  display: none;
+  float: left;
+}
+#marker-add-button button {
+  background-color: #f27935;
+  line-height: 20px;
+  text-align: center;
+  padding: 5px 15px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  -moz-border-radius-: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 0;
+}
+.box {
+  border: 1px solid #dedede;
+  padding: 12px;
+  background-color: #fff;
+  box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+}
+#editor-panels > div {
+  float: left;
+}
+#editor-panels #walk-point-editor {
+  width: 30%;
+}
+#editor-panels #walk-point-editor .panel-separator {
+  margin: 0 10px 0 2px;
+  width: 1px;
+  background-color: #bbbbbb;
+  min-height: 600px;
+  float: left;
+}
+#editor-panels .editor-option {
+  margin: 10px 0px;
+}
+#editor-panels .panel-wrapper {
+  padding: 0 20px;
+}
+#editor-panels label {
+  display: block;
+  background-color: #323a45;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+#editor-panels #toggle-tipos a {
+  background-image: url(img/tipos.png);
+}
+#editor-panels #toggle-tipos #tipo-once a {
+  background-position: 0 0;
+}
+#editor-panels #toggle-tipos #tipo-once a.selected-button {
+  background-position: 0 -30px;
+}
+#editor-panels #toggle-tipos #tipo-loop a {
+  background-position: -50px 0;
+}
+#editor-panels #toggle-tipos #tipo-loop a.selected-button {
+  background-position: -15px -30px;
+}
+#editor-panels #toggle-tipos #tipo-end a {
+  background-position: -100px 0;
+}
+#editor-panels #toggle-tipos #tipo-end a.selected-button {
+  background-position: -30px -30px;
+}
+#editor-panels #toggle-tipos #tipo-wifi a {
+  background-position: -150px 0;
+}
+#editor-panels #toggle-tipos #tipo-wifi a.selected-button {
+  background-position: -45px -30px;
+}
+#editor-panels #toggle-tipos #tipo-layer a {
+  background-position: -200px 0;
+}
+#editor-panels #toggle-tipos #tipo-layer a.selected-button {
+  background-position: -60px -30px;
+}
+#toogle-options a {
+  background-image: url(img/tipos.png);
+}
+#toogle-options #option-vibrate {
+  background-position: -250px 0;
+}
+#toogle-options #option-autofade {
+  background-position: -300px 0;
+}
+.toggle-control ul {
+  width: 100%;
+  margin-top: 0px;
+  background-color: #9ea7b3;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 50px;
+}
+.toggle-control li {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 0;
+}
+.toggle-control li.first-leaf a {
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.toggle-control a {
+  overflow: hidden;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-indent: -9999px;
+}
+.toggle-control a:hover,
+.toggle-control a.selected {
+  background-color: #14b9d6;
+}
+.layer-control ul {
+  width: 100%;
+  margin-top: 0px;
+  background-color: #9ea7b3;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 50px;
+}
+.layer-control li {
+  height: 50px;
+  display: inline-block;
+  margin: 0;
+  width: 13%;
+}
+.layer-control li.first-leaf a {
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.layer-control a {
+  overflow: hidden;
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.layer-control a:hover,
+.layer-control a.selected {
+  background-color: #14b9d6;
+}
+.text-control {
+  width: 100%;
+  margin-top: 0px;
+  background-color: #9ea7b3;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 50px;
+}
+.text-control .text-control-wrapper {
+  padding: 15px 21px;
+}
+.text-control input {
+  height: 20px;
+  width: 100%;
+  background-color: #9ea7b3;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid #323a45;
+  box-shadow: none;
+}
+.text-control input:focus {
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #323a45;
+  background-color: #14b9d6;
+}
+.slider-control {
+  width: 100%;
+  margin-top: 0px;
+  background-color: #9ea7b3;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 50px;
+}
+.slider-control .slider-wrapper {
+  padding: 21px;
+}
+.slider-control .ui-slider {
+  position: relative;
+  height: 8px;
+  background-color: #323a45;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.slider-control .ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 8px;
+  height: 8px;
+  cursor: default;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: white;
+}
+.mejs-container {
+  background-color: #323a45;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+  text-indent: 0;
+}
+.mejs-container .mejs-mediaelement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Start: CONTROL BAR */
+.mejs-container .mejs-controls {
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+}
+.mejs-container .mejs-controls div {
+  list-style-type: none;
+  background-image: none;
+  background-color: #202226;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 11px;
+  line-height: 11px;
+  border: 0;
+}
+.mejs-controls .mejs-button button {
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border: 0;
+  background: transparent url(img/controls.png) no-repeat;
+}
+.no-svg .mejs-controls .mejs-button button {
+  background-image: url(img/controls.png);
+}
+/* :focus for accessibility */
+.mejs-controls .mejs-button button:focus {
+  outline: solid 1px yellow;
+}
+/* End: CONTROL BAR */
+/* Start: Time (Current / Duration) */
+.mejs-container .mejs-controls .mejs-time {
+  color: #fff;
+  background-color: transparent;
+  display: block;
+  height: px;
+  width: auto;
+  padding: 8px 3px 0 3px ;
+  overflow: hidden;
+  text-align: center;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.mejs-container .mejs-controls .mejs-time span {
+  color: #fff;
+  font-size: 11px;
+  line-height: 12px;
+  display: block;
+  float: left;
+  margin: 1px 2px 0 0;
+  width: auto;
+}
+/* End: Time (Current / Duration) */
+/* Start: Play/Pause/Stop */
+.mejs-controls .mejs-play button {
+  background-position: 0 0;
+}
+.mejs-controls .mejs-pause button {
+  background-position: -50px 0px;
+}
+.mejs-controls .mejs-stop button {
+  background-position: -112px 0;
+}
+/* Start: Play/Pause/Stop */
+/* Start: Progress Bar */
+.mejs-controls div.mejs-time-rail {
+  direction: ltr;
+  width: 180px;
+  padding-top: 14px;
+  background-color: transparent;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.mejs-controls .mejs-time-rail span {
+  display: block;
+  position: absolute;
+  width: 180px;
+  height: 8px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.mejs-controls .mejs-time-rail .mejs-time-total {
+  margin: 8px;
+  background: black;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.mejs-controls .mejs-time-rail .mejs-time-buffering {
+  width: 100%;
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 15px 15px;
+  -moz-background-size: 15px 15px;
+  -o-background-size: 15px 15px;
+  background-size: 15px 15px;
+  -webkit-animation: buffering-stripes 2s linear infinite;
+  -moz-animation: buffering-stripes 2s linear infinite;
+  -ms-animation: buffering-stripes 2s linear infinite;
+  -o-animation: buffering-stripes 2s linear infinite;
+  animation: buffering-stripes 2s linear infinite;
+}
+@-webkit-keyframes buffering-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 30px 0;
+  }
+}
+@-moz-keyframes buffering-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 30px 0;
+  }
+}
+@-ms-keyframes buffering-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 30px 0;
+  }
+}
+@-o-keyframes buffering-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 30px 0;
+  }
+}
+@keyframes buffering-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 30px 0;
+  }
+}
+.mejs-controls .mejs-time-rail .mejs-time-loaded {
+  background: #5e6d81;
+  width: 0;
+}
+.mejs-controls .mejs-time-rail .mejs-time-current {
+  background: #fff;
+  display: none;
+  width: 0;
+}
+.mejs-controls .mejs-time-rail .mejs-time-handle {
+  position: absolute;
+  margin: 0;
+  width: 8px;
+  background: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+.mejs-controls .mejs-time-rail .mejs-time-float {
+  position: absolute;
+  display: none;
+  background: #eee;
+  width: 36px;
+  height: 17px;
+  border: solid 1px #333;
+  top: -26px;
+  margin-left: -18px;
+  text-align: center;
+  color: #111;
+}
+.mejs-controls .mejs-time-rail .mejs-time-float-current {
+  margin: 2px;
+  width: 30px;
+  display: block;
+  text-align: center;
+  left: 0;
+}
+.mejs-controls .mejs-time-rail .mejs-time-float-corner {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border: solid 5px #eee;
+  border-color: #eee transparent transparent transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  top: 15px;
+  left: 13px;
+}
+.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float {
+  width: 48px;
+}
+.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-current {
+  width: 44px;
+}
+.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-corner {
+  left: 18px;
+}
+/*
+.mejs-controls .mejs-time-rail:hover .mejs-time-handle {
+        visibility:visible;
+}
+*/
+/* End: Progress Bar */
+/* Start: Mute/Volume */
+.mejs-container .mejs-controls .mejs-volume-button {
+  background-color: transparent;
+}
+.mejs-container .mejs-controls .mejs-mute button {
+  background-position: -100px 0px;
+}
+.mejs-container .mejs-controls .mejs-unmute button {
+  background-position: -150px 0;
+}
+.mejs-container .mejs-controls .mejs-volume-button {
+  position: relative;
+}
+.mejs-container .mejs-controls .mejs-volume-button .mejs-volume-slider {
+  display: none;
+  height: 115px;
+  width: 25px;
+  background: url(background.png);
+  background: rgba(50, 50, 50, 0.7);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  top: -115px;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+  margin: 0;
+}
+.mejs-container .mejs-controls .mejs-volume-button:hover {
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+/*
+.mejs-controls .mejs-volume-button:hover .mejs-volume-slider {
+        display: block;
+}
+*/
+.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  width: 2px;
+  height: 100px;
+  background: #ddd;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  width: 2px;
+  height: 100px;
+  background: #ddd;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
+  position: absolute;
+  left: 4px;
+  top: -3px;
+  width: 16px;
+  height: 6px;
+  background: #ddd;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: N-resize;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  margin: 0;
+}
+/* VOLUME horizontal version */
+.mejs-controls div.mejs-horizontal-volume-slider {
+  height: 26px;
+  width: 50px;
+  position: relative;
+  background-color: transparent;
+  margin-left: -1px;
+}
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+  position: absolute;
+  left: 0;
+  top: 21px;
+  width: 40px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: black;
+}
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  position: absolute;
+  left: 0;
+  top: 21px;
+  width: 40px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: #5e6d81;
+}
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {
+  display: none;
+}
+/* End: Mute/Volume */
+/* ----------------------------------------------------------------------------------------------------------------*/
+/* ---------->>> global settings needed for thickbox <<<-----------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+}
+/* ----------------------------------------------------------------------------------------------------------------*/
+/* ---------->>> thickbox specific link and font settings <<<------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------*/
+#TB_window {
+  color: #333333;
+}
+#TB_secondLine {
+  color: #666666;
+}
+#TB_window a:link {
+  color: #666666;
+}
+#TB_window a:visited {
+  color: #666666;
+}
+#TB_window a:hover {
+  color: #000;
+}
+#TB_window a:active {
+  color: #666666;
+}
+#TB_window a:focus {
+  color: #666666;
+}
+/* ----------------------------------------------------------------------------------------------------------------*/
+/* ---------->>> thickbox settings <<<-----------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------*/
+#TB_overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+.TB_overlayMacFFBGHack {
+  background: url(macFFBgHack.png) repeat;
+}
+.TB_overlayBG {
+  background-color: #000;
+  filter: alpha(opacity=75);
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+}
+#TB_window {
+  position: fixed;
+  background: #ffffff;
+  z-index: 102;
+  color: #000000;
+  text-align: left;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+}
+#TB_window img#TB_Image {
+  display: block;
+  margin: 15px 0 0 15px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #666;
+  border-left: 1px solid #666;
+}
+#TB_caption {
+  height: 25px;
+  padding: 7px 30px 10px 25px;
+  float: left;
+}
+#TB_closeWindow {
+  height: 25px;
+  padding: 11px 25px 10px 0;
+  float: right;
+}
+#TB_closeAjaxWindow {
+  padding: 7px 10px 5px 0;
+  margin-bottom: 1px;
+  text-align: right;
+  float: right;
+}
+#TB_ajaxWindowTitle {
+  float: left;
+  padding: 7px 0 5px 10px;
+  margin-bottom: 1px;
+}
+#TB_title {
+  background-color: #e8e8e8;
+  height: 27px;
+}
+#TB_ajaxContent {
+  clear: both;
+  padding: 2px 15px 15px 15px;
+  overflow: auto;
+  text-align: left;
+  line-height: 1.4em;
+}
+#TB_ajaxContent.TB_modal {
+  padding: 15px;
+}
+#TB_ajaxContent p {
+  padding: 5px 0px 5px 0px;
+}
+#TB_load {
+  position: fixed;
+  display: none;
+  height: 13px;
+  width: 208px;
+  z-index: 103;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -104px;
+  /* -height/2 0 0 -width/2 */
+
+}
+#TB_HideSelect {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border: none;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+#TB_iframeContent {
+  clear: both;
+  border: none;
+  margin-bottom: -1px;
+  margin-top: 1px;
+  _margin-bottom: 1px;
+}
+.mejs-clear {
+  clear: both;
+}
+.clear {
+  clear: both !important;
+  float: none !important;
+}
